@@ -1,0 +1,123 @@
+.container-footer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 94px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer {
+  display: flex;
+  background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adress {
+  display: inline-block;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  fill: #ffffff;
+}
+
+.add-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.footer-add {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link-add {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-subscription {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-subscription {
+  display: flex;
+}
+
+.subscription-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primery-bg-color;
+  margin-bottom: 20px;
+}
+
+.input-subscription {
+  display: block;
+  width: 358px;
+  height: 50px;
+  background-color: #2f303a;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  color: $button-color;
+  padding-left: 16px;
+}
+
+.subscription-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid $active-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $primery-bg-color;
+  background-color: $active-color;
+}
+.subscription-icon {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  fill: $primery-bg-color;
+}

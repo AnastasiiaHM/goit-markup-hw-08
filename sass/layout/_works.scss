@@ -1,0 +1,39 @@
+.works__list {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.works__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works__wrapper {
+  position: relative;
+}
+
+.works__overlay {
+  position: absolute;
+  content: "";
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works__overlay__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primery-bg-color;
+}
