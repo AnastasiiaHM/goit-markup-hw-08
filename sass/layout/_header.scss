@@ -1,17 +1,45 @@
 .header {
-  display: flex;
+  // display: flex;
   border-bottom: 1px solid #ececec;
-}
-.header__main {
-  display: flex;
-}
-.conteiner-header {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 
-  background-color: #ffffff;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.header__main {
+  // display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.conteiner-header {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    background-color: #ffffff;
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.header__button {
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }

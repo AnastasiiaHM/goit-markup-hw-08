@@ -1,16 +1,29 @@
 .contact {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
 }
 
 .contact__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $primery-text-color;
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primery-text-color;
+  }
 }
 
 .contact__link {

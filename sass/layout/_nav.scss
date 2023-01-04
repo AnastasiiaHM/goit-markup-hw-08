@@ -1,41 +1,58 @@
 .nav {
-  display: flex;
-  gap: 50px;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: $secondary-text-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $active-color;
+    &:hover,
+    &:focus {
+      color: $active-color;
+    }
+  }
+  @media screen and (min-width: $desktop) {
   }
 }
 
 .nav__link-active {
-  color: $active-color;
-  position: relative;
+  display: none;
 
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: $active-color;
-    left: 0;
-    bottom: 0;
-    border-radius: 2px;
+  @media screen and (min-width: $tablet) {
+    color: $active-color;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $active-color;
+      left: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
   }
 }

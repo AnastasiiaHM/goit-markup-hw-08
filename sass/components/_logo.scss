@@ -1,24 +1,37 @@
 .logo {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-  justify-content: center;
-  align-items: baseline;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  font-family: "Raleway";
-  font-size: 26px;
+  // justify-content: center;
+  // align-items: baseline;
+
   text-decoration: none;
   letter-spacing: 0.03em;
-  font-size: normal;
+  font-family: "Raleway";
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
 
   &__web {
     color: $active-color;
   }
   &__studio {
     color: #000000;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.2;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
   }
 }
 .logo-footer {
