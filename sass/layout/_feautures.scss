@@ -1,17 +1,27 @@
 .feautres {
-  padding-bottom: 0px;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0px;
+  }
 }
 
 .benefits {
-  display: flex;
-  justify-content: center;
-  display: flex;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   background-color: #ffffff;
-  gap: 30px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.benefits__item:not(:last-child) {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .benefits__title {
@@ -32,12 +42,20 @@
   letter-spacing: 0.03em;
 
   color: $primery-text-color;
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
+
+  @media screen and (max-width: $desktop) {
+    width: 350px;
+  }
 }
 .benefits__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+
+  width: 100%;
   height: 120px;
   background-color: $button-color;
   border-radius: 4px;
@@ -46,5 +64,14 @@
   &-size {
     width: 70px;
     height: 70px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 350px;
+    height: 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    height: 120px;
   }
 }

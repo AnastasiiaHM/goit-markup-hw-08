@@ -18,12 +18,16 @@
   }
 }
 .hero__button {
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: $active-color;
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 32px;
+  }
 }
 .hero__title {
   display: flex;

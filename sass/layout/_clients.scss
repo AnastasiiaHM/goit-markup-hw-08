@@ -12,6 +12,9 @@
   display: flex;
   list-style: none;
   gap: 30px;
+  @media screen and (min-width: $mobile) {
+    flex-wrap: wrap;
+  }
 }
 .clients-item {
   display: flex;
@@ -22,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -32,6 +35,15 @@
   &:focus,
   &:hover {
     border: 1px solid $active-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 226px;
+    height: 92px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+    height: 92px;
   }
 }
 .client-ikon-item {

@@ -3,11 +3,26 @@
   padding-bottom: 94px;
 }
 .team {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .team__photo {
   display: block;
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+  }
 }
 .team__li {
   background: #ffffff;
@@ -15,6 +30,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+  }
 }
 .team__title {
   margin-top: 30px;
@@ -26,13 +48,29 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+  }
 }
 
 .team__text {
   text-align: center;
   margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+  }
 }
 
 .team__li + .team__li {
-  margin-left: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 30px;
+  }
 }
