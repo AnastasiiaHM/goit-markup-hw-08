@@ -37,6 +37,10 @@
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
+  @media screen and (max-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .logo__studio-footer {
   color: #ffffff;

@@ -8,8 +8,11 @@
 
   background-color: #2f303a;
   background-repeat: no-repeat;
-  background-position: center;
+  // background-position: ;
+  background-size: cover;
   text-align: center;
+}
+.hero .container {
   padding-top: 118px;
   padding-bottom: 118px;
   @media screen and (min-width: $desktop) {

@@ -1,7 +1,7 @@
 .contact {
-  display: none;
+  // display: none;
   @media screen and (min-width: $tablet) {
-    display: flex;
+    display: block;
   }
   @media screen and (min-width: $desktop) {
     font-weight: 500;
@@ -51,17 +51,32 @@
   &:hover,
   &:focus {
     color: $active-color;
+
+    @media screen and (min-width: $tablet) {
+      margin-left: 76px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
   }
 }
 .contact-footer-item {
   margin-top: 9px;
+  // @media screen and (max-width: $desktop) {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
 }
 .contact-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  text-decoration: none;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-left: auto;
+    text-decoration: none;
+  }
 }
 
 .contact__mail-icon {

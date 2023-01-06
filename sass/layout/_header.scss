@@ -10,7 +10,6 @@
 }
 
 .header__main {
-  // display: flex;
   @media screen and (min-width: $tablet) {
     display: flex;
   }
@@ -19,8 +18,8 @@
 }
 
 .conteiner-header {
+  display: flex;
   @media screen and (min-width: $tablet) {
-    display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
