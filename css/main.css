@@ -807,7 +807,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .team__photo {
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (max-width: 1199px) {
