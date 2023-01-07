@@ -1,7 +1,7 @@
 .logo {
   display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
   // justify-content: center;
   // align-items: baseline;
@@ -25,6 +25,7 @@
   @media screen and (min-width: $tablet) {
     padding-top: 26px;
     padding-bottom: 26px;
+    margin-right: 87px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 26px;

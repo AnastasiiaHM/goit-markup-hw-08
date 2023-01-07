@@ -2,10 +2,10 @@
   display: none;
   @media screen and (min-width: $tablet) {
     display: flex;
+    gap: 50px;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
-    gap: 50px;
   }
 }
 
@@ -13,6 +13,7 @@
   display: none;
   @media screen and (min-width: $tablet) {
     display: block;
+
     padding-top: 32px;
     padding-bottom: 32px;
     color: $secondary-text-color;
@@ -38,6 +39,7 @@
   display: none;
 
   @media screen and (min-width: $tablet) {
+    display: block;
     color: $active-color;
     position: relative;
 

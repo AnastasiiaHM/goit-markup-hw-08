@@ -26,8 +26,19 @@
           <span class="logo__web">Web</span
           ><span class="logo__studio">Studio</span></a
         >
-        <button type="button" class="header__button">
-          <svg width="40" height="40">
+        <button
+          type="button"
+          class="header__button is-open"
+          aria-expanded="false"
+          aria-controls="conteiner__menu"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="mobile menu"
+            class="button__icon"
+          >
             <use
               href="./image/symbol-defs.svg#icon-menu"
               class="icon_menu"
@@ -38,6 +49,54 @@
             ></use>
           </svg>
         </button>
+
+        <div class="container__menu" id="conteiner__menu" data-menu>
+          <nav class="header__main-mobile">
+            <ul class="utilited-ul nav-mobile">
+              <li class="nav__item-mobile">
+                <a href="./index.html" class="nav__link-mobile">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="./portfolio.html"
+                  target="_blank"
+                  class="nav__link-mobile"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item-mobile">
+                <a href="" class="nav__link-mobile">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contact contact-header-mobile utilited-ul">
+            <li class="contact__item-mobile">
+              <a href="tel:+380961111111" class="contact__link-mobile">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="contact__item-mobile">
+              <a href=" mailto:info@devstudio.com" class="contact__mail-mobile">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="menu_social">
+            <li>
+              <a href="#" class="menu_social-item-inst">Instagram</a>
+            </li>
+            <li>
+              <a href="#" class="menu_social-item">Twitter</a>
+            </li>
+            <li>
+              <a href="#" class="menu_social-item">Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="menu_social-item">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
 
         <nav class="header__main">
           <ul class="utilited-ul nav">
@@ -681,5 +740,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

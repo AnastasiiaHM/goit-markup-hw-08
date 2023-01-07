@@ -104,8 +104,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   text-decoration: none;
   letter-spacing: 0.03em;
   font-family: "Raleway";
@@ -125,6 +125,7 @@ a {
   .logo {
     padding-top: 26px;
     padding-bottom: 26px;
+    margin-right: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -170,6 +171,7 @@ a {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 @media screen and (min-width: 768px) {
@@ -177,6 +179,12 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
@@ -187,15 +195,20 @@ a {
   }
 }
 .conteiner-header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
 }
 @media screen and (min-width: 768px) {
   .conteiner-header {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;
@@ -204,15 +217,127 @@ a {
   }
 }
 .header__button {
-  display: block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
   margin-left: auto;
-  width: 40px;
-  height: 40px;
+  background-color: transparent;
+  border: 0;
+}
+.header__button .icon_close {
+  display: none;
+}
+.header__button.is-open .icon_close {
+  display: block;
+}
+.header__button.is-open .icon_menu {
+  display: none;
+}
+.header__button:hover .icon_menu, .header__button:focus .icon_menu {
+  fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
   .header__button {
     display: none;
   }
+}
+
+.icon_menu {
+  -webkit-transition: fill 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: fill 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header__button.is-open + .logo {
+  display: none;
+}
+
+.container__menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .container__menu {
+    position: absolute;
+    padding: 0px 40px 48px;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .container__menu.is-open {
+    display: block;
+  }
+}
+
+.nav-mobile {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  list-style: none;
+  color: #212121;
+  margin-bottom: 306px;
+}
+
+.nav__link-mobile {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 32px;
+  -webkit-transition: color 250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.nav__link-mobile:hover, .nav__link-mobile:focus {
+  color: #2196f3;
+}
+
+.contact__link-mobile {
+  display: block;
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.contact__mail-mobile {
+  display: block;
+  margin-bottom: 64px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #212121;
+}
+
+.menu_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #2196f3;
+}
+
+.menu_social-item {
+  text-decoration: none;
+  display: block;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 10px;
+}
+
+.menu_social-item-inst {
+  text-decoration: none;
 }
 
 .nav {
@@ -223,6 +348,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -230,7 +356,6 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 50px;
   }
 }
 
@@ -264,6 +389,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .nav__link-active {
+    display: block;
     color: #2196f3;
     position: relative;
   }
@@ -281,7 +407,13 @@ a {
 }
 @media screen and (min-width: 768px) {
   .contact {
-    display: block;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -290,7 +422,6 @@ a {
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-decoration: none;
   }
 }
 
@@ -299,9 +430,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .contact__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -329,6 +458,11 @@ a {
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .contact__link {
+    display: blocki;
+  }
 }
 
 .contact-footer {
@@ -368,10 +502,24 @@ a {
 }
 @media screen and (min-width: 768px) {
   .contact-header {
+    display: block;
+    margin-left: auto;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-decoration: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -390,7 +538,6 @@ a {
 .contact__tel-icon {
   fill: #757575;
   margin-right: 10px;
-  margin-left: 50px;
   width: 16px;
   height: 18px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -398,6 +545,11 @@ a {
 }
 .contact__link:hover .contact__tel-icon, .contact__link:focus .contact__tel-icon {
   fill: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .contact__tel-icon {
+    margin-left: 50px;
+  }
 }
 
 .hero {
@@ -1139,6 +1291,12 @@ a {
   -webkit-transition: opacity 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: opacity 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+@media screen and (max-width: 768px) {
+  .backdrop {
+    padding: 93px 15px 94px;
+    overflow-y: scroll;
+  }
+}
 
 .is-hidden {
   opacity: 0;
@@ -1160,7 +1318,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   height: 581px;
-  width: 521px;
+  max-width: 450px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1171,6 +1329,16 @@ a {
   transition: -webkit-transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media screen and (min-width: 1200px) {
+  .hero-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 521px;
+  }
 }
 
 .close-btn {
@@ -1259,10 +1427,15 @@ a {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .request-title {
+    line-height: 1.15;
+  }
 }
 
 .input-icon {
@@ -1282,7 +1455,7 @@ a {
 .text-commit {
   display: block;
   margin-top: 4px;
-  width: 448px;
+  max-width: 448px;
   height: 120px;
   padding: 12px 16px;
   border-radius: 4px;
@@ -1352,8 +1525,9 @@ a {
 }
 
 .request-btn {
+  display: block;
   width: 200px;
-  height: 50px;
+  max-height: 50px;
   margin-left: auto;
   margin-right: auto;
   background: #2196f3;
