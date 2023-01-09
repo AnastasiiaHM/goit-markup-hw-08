@@ -27,12 +27,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: calc((100% - 30px) / 2);
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px * 2) / 3);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 30px * 5) / 6);
+  }
 }
 .clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 100%;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -42,15 +49,6 @@
   &:focus,
   &:hover {
     border: 1px solid $active-color;
-  }
-
-  @media screen and (min-width: $tablet) {
-    width: 226px;
-    height: 92px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 170px;
-    height: 92px;
   }
 }
 .client-ikon-item {
