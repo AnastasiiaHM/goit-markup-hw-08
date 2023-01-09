@@ -84,19 +84,19 @@
   right: 15px;
   z-index: 1000;
 
-  & .icon_close {
+  & .icon_menu {
     display: none;
-  }
-
-  &.is-open .icon_close {
-    display: block;
   }
 
   &.is-open .icon_menu {
+    display: block;
+  }
+
+  &.is-open .icon_close {
     display: none;
   }
-  &:hover .icon_menu,
-  &:focus .icon_menu {
+  &:hover .icon_close,
+  &:focus .icon_close {
     fill: $active-color;
   }
 

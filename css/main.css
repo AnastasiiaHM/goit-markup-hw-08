@@ -277,16 +277,16 @@ a {
   right: 15px;
   z-index: 1000;
 }
-.header__button .icon_close {
+.header__button .icon_menu {
   display: none;
-}
-.header__button.is-open .icon_close {
-  display: block;
 }
 .header__button.is-open .icon_menu {
+  display: block;
+}
+.header__button.is-open .icon_close {
   display: none;
 }
-.header__button:hover .icon_menu, .header__button:focus .icon_menu {
+.header__button:hover .icon_close, .header__button:focus .icon_close {
   fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
