@@ -62,13 +62,13 @@
   &:hover,
   &:focus {
     color: $active-color;
+  }
 
-    @media screen and (min-width: $tablet) {
-      margin-left: 76px;
-    }
-    @media screen and (min-width: $desktop) {
-      display: flex;
-    }
+  @media screen and (min-width: $tablet) {
+    // margin-left: 76px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
   }
 }
 .contact-footer-item {

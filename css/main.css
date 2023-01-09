@@ -123,13 +123,15 @@ a {
 }
 @media screen and (min-width: 768px) {
   .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
     margin-right: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
   .logo {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 26px;
     line-height: 1.2;
     padding-top: 24px;
@@ -141,14 +143,8 @@ a {
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
+  margin-top: 0;
 }
-@media screen and (max-width: 1200px) {
-  .logo-footer {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .logo__studio-footer {
   color: #ffffff;
 }
@@ -233,8 +229,8 @@ a {
   .container__menu {
     padding: 0px 40px 48px;
     background-color: #fff;
-    width: 100%;
-    height: 796px;
+    width: 100vw;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -246,22 +242,15 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .container__menu.is-open {
-    display: block;
-  }
 }
 
-.contact-social {
+.container__menu {
+  display: none;
+}
+.container__menu.is-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .header__button {
@@ -277,16 +266,16 @@ a {
   right: 15px;
   z-index: 1000;
 }
-.header__button .icon_menu {
+.header__button .icon-close_menu {
   display: none;
 }
-.header__button.is-open .icon_menu {
+.header__button.is-open .icon-close_menu {
   display: block;
 }
-.header__button.is-open .icon_close {
+.header__button.is-open .icon-menu {
   display: none;
 }
-.header__button:hover .icon_close, .header__button:focus .icon_close {
+.header__button:hover .icon-menu, .header__button:focus .icon-menu {
   fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
@@ -317,6 +306,16 @@ a {
   color: #2196f3;
 }
 
+.contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .contact__link-mobile {
   display: block;
   margin-bottom: 32px;
@@ -342,9 +341,9 @@ a {
 }
 
 .menu_social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   gap: 10px;
   font-style: normal;
   font-weight: 500;
@@ -506,13 +505,8 @@ a {
 .contact-footer:hover, .contact-footer:focus {
   color: #2196f3;
 }
-@media screen and (min-width: 768px) {
-  .contact-footer:hover, .contact-footer:focus {
-    margin-left: 76px;
-  }
-}
 @media screen and (min-width: 1200px) {
-  .contact-footer:hover, .contact-footer:focus {
+  .contact-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -883,6 +877,7 @@ a {
   .team__li {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -949,7 +944,6 @@ a {
       align-self: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
   gap: 10px;
   list-style: none;
 }
@@ -1102,6 +1096,9 @@ a {
     gap: 60px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1166,11 +1163,6 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media screen and (max-width: 768px) {
-  .footer-contacts {
-    margin-bottom: 60px;
-  }
-}
 @media screen and (max-width: 1200px) {
   .footer-contacts {
     text-align: center;
@@ -1193,8 +1185,6 @@ a {
 
 .footer-add {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media screen and (max-width: 1200px) {
   .footer-add {
@@ -1277,6 +1267,7 @@ a {
   outline: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border: 0;
   border-radius: 4px;
   color: #f5f4fa;
   padding-left: 16px;
@@ -1338,6 +1329,7 @@ a {
 }
 
 .backdrop {
+  z-index: 1200;
   position: fixed;
   top: 0;
   left: 0;
@@ -1373,6 +1365,7 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 12000;
   height: 581px;
   max-width: 450px;
   padding: 40px;

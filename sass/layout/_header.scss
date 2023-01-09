@@ -57,22 +57,26 @@
     padding: 0px 40px 48px;
     background-color: #fff;
 
-    width: 100%;
-    height: 796px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &.is-open {
-      display: block;
-    }
   }
 }
 
-.contact-social {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.container__menu {
+  display: none;
+  &.is-open {
+    display: flex;
+  }
 }
+
+// .contact-social {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+// }
 .header__button {
   position: absolute;
   display: inline-flex;
@@ -84,19 +88,19 @@
   right: 15px;
   z-index: 1000;
 
-  & .icon_menu {
+  & .icon-close_menu {
     display: none;
   }
 
-  &.is-open .icon_menu {
+  &.is-open .icon-close_menu {
     display: block;
   }
 
-  &.is-open .icon_close {
+  &.is-open .icon-menu {
     display: none;
   }
-  &:hover .icon_close,
-  &:focus .icon_close {
+  &:hover .icon-menu,
+  &:focus .icon-menu {
     fill: $active-color;
   }
 
@@ -127,6 +131,9 @@
 }
 
 .contact-social {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
 }
 
 .contact__link-mobile {
@@ -156,7 +163,7 @@
   color: $secondary-text-color;
 }
 .menu_social {
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   font-style: normal;
   font-weight: 500;
