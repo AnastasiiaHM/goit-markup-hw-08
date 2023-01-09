@@ -164,6 +164,7 @@
 }
 .menu_social {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 10px;
   font-style: normal;
   font-weight: 500;
