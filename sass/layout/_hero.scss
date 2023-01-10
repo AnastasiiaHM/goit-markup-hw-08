@@ -4,6 +4,12 @@
   // background-position: ;
   background-size: cover;
   text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../image/mobile.jpg");
 
   @media screen and (min-width: $desktop) {
     background-image: linear-gradient(
@@ -36,13 +42,6 @@
   }
 
   @media screen and (max-width: 767.98px) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../image/mobile.jpg");
-
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {

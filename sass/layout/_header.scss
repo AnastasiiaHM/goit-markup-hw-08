@@ -48,27 +48,25 @@
 
 .container__menu {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
 
   @media screen and (max-width: 767.98px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
     padding: 0px 40px 48px;
     background-color: #fff;
 
     width: 100vw;
     height: 100vh;
-    display: flex;
+
     flex-direction: column;
     justify-content: space-between;
-  }
-}
 
-.container__menu {
-  display: none;
-  &.is-open {
-    display: flex;
+    &.is-open {
+      display: flex;
+    }
   }
 }
 

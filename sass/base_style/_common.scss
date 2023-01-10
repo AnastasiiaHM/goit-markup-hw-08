@@ -15,4 +15,8 @@ body {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
