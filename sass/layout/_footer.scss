@@ -27,7 +27,7 @@
   }
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-e;
+    justify-content: space-around;
   }
 }
 
@@ -83,7 +83,9 @@
 }
 
 .footer-add {
-  text-align: center;
+  @media screen and (max-width: 1199.98px) {
+    text-align: center;
+  }
 
   @media screen and (max-width: $desktop) {
     margin-bottom: 60px;

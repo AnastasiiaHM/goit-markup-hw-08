@@ -1141,9 +1141,8 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-e;
-        -ms-flex-pack: space-e;
-            justify-content: space-e;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -1203,8 +1202,10 @@ a {
   color: #ffffff;
 }
 
-.footer-add {
-  text-align: center;
+@media screen and (max-width: 1199.98px) {
+  .footer-add {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 1200px) {
   .footer-add {
