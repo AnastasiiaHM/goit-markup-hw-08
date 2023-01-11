@@ -128,6 +128,10 @@
   }
 }
 
+.mobile-active {
+  color: $active-color;
+}
+
 .contact-social {
   display: flex;
   flex-direction: column;
@@ -158,8 +162,9 @@
   line-height: 28px;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: $secondary-text-color;
+  color: $primery-text-color;
 }
+
 .menu_social {
   display: flex;
   flex-wrap: wrap;

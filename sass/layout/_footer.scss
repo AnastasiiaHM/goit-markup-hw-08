@@ -13,7 +13,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    gap: 94px;
+    gap: 0;
     flex-wrap: nowrap;
   }
 }
@@ -27,7 +27,7 @@
   }
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-e;
   }
 }
 
@@ -92,6 +92,8 @@
   @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: column;
+    margin-right: 93px;
+    margin-left: 70px;
   }
 }
 

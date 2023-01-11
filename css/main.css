@@ -304,6 +304,10 @@ a {
   color: #2196f3;
 }
 
+.mobile-active {
+  color: #2196f3;
+}
+
 .contact-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,7 +339,7 @@ a {
   line-height: 28px;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #212121;
+  color: #757575;
 }
 
 .menu_social {
@@ -1114,7 +1118,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .container-footer {
-    gap: 94px;
+    gap: 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -1137,9 +1141,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-e;
+        -ms-flex-pack: space-e;
+            justify-content: space-e;
   }
 }
 
@@ -1217,6 +1221,8 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-right: 93px;
+    margin-left: 70px;
   }
 }
 
