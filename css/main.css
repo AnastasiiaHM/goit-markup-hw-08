@@ -147,7 +147,9 @@ a {
   display: inline-block;
   margin-bottom: 20px;
   margin-top: 0;
+  margin-right: 0;
 }
+
 .logo__studio-footer {
   color: #ffffff;
 }
@@ -453,7 +455,10 @@ a {
 }
 @media screen and (min-width: 768px) {
   .contact__item {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -468,6 +473,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     color: #757575;
+    margin-bottom: 0;
   }
 }
 
@@ -484,7 +490,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .contact__link {
-    display: blocki;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -578,15 +589,9 @@ a {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/mobile.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/mobile.jpg");
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/desktop.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/desktop.jpg");
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../image/desktop2.jpg");
+    background-image: url("../image/mobile2.jpg");
   }
 }
 @media screen and (min-width: 768px) {
@@ -600,9 +605,15 @@ a {
     background-image: url("../image/tablet2.jpg");
   }
 }
-@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("../image/mobile2.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/desktop.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/desktop.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../image/desktop2.jpg");
   }
 }
 
@@ -698,6 +709,11 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+}
+@media screen and (max-width: 767.98px) {
+  .benefits__title {
+    text-align: center;
+  }
 }
 
 .benefits__text {
@@ -863,6 +879,7 @@ a {
 
 .team__li {
   background: #ffffff;
+  padding-bottom: 24px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -1157,6 +1174,11 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .footer-contacts {
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 1200px) {
   .footer-contacts {
     text-align: center;
@@ -1183,6 +1205,7 @@ a {
 @media screen and (max-width: 1200px) {
   .footer-add {
     margin-bottom: 60px;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {

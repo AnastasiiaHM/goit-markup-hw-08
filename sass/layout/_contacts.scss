@@ -24,13 +24,16 @@
   display: none;
 
   @media screen and (min-width: $tablet) {
-    display: block;
+    display: flex;
+
+    margin-bottom: 10px;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
     justify-content: center;
     color: $primery-text-color;
+    margin-bottom: 0;
   }
 }
 
@@ -44,7 +47,9 @@
     color: $active-color;
   }
   @media screen and (min-width: $tablet) {
-    display: blocki;
+    // display: block;
+    justify-content: center;
+    align-items: center;
   }
 }
 
